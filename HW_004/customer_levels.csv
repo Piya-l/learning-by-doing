@@ -1,0 +1,11 @@
+Level,Discount,DiscountType
+Regular,0,%
+Silver,10,$
+Gold,10,%
+Platinum,15,$
+VIP,20,%
+Student,5,$
+SeniorCitizen,12,%
+Employee,20,$
+Wholesale,25,%
+NewCustomer,7,$
