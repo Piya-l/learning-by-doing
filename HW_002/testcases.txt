@@ -1,0 +1,153 @@
+# Test Case 1: ---------------------------------------------------------------------
+Input:
+1
+t
+5.0
+10.0
+5
+
+Expected Output:
+Menu
+1. Add a shape
+2. Update a shape
+3. Delete a shape
+4. Display all shapes
+5. Exit
+Enter your choice: 1
+Enter the shape type (t for Triangle/r for Rectangle): t
+Enter the width of the shape: 5.0
+Enter the height of the shape: 10.0
+Shape added successfully!
+Menu
+1. Add a shape
+2. Update a shape
+3. Delete a shape
+4. Display all shapes
+5. Exit
+Enter your choice: 5
+Exiting...
+
+
+# Test Case 2: ---------------------------------------------------------------------
+Input:
+1
+t
+5.0
+10.0
+2
+0
+r
+7.0
+14.0
+5
+
+Expected Output:
+Menu
+1. Add a shape
+2. Update a shape
+3. Delete a shape
+4. Display all shapes
+5. Exit
+Enter your choice: 1
+Enter the shape type (t for Triangle/r for Rectangle): t
+Enter the width of the shape: 5
+Enter the height of the shape: 10
+Shape added successfully!
+Menu
+1. Add a shape
+2. Update a shape
+3. Delete a shape
+4. Display all shapes
+5. Exit
+Enter your choice: 2
+Enter the index of the shape to update: 0
+Enter the new shape type (t for Triangle/r for Rectangle): r
+Enter the new width of the shape: 7.0
+Enter the new height of the shape: 14.0
+Shape updated successfully!
+Menu
+1. Add a shape
+2. Update a shape
+3. Delete a shape
+4. Display all shapes
+5. Exit
+Enter your choice: 5
+Exiting...
+
+# Test Case 3: ---------------------------------------------------------------------
+Input:
+1
+t
+5.0
+10.0
+3
+0
+5
+
+Expected Output:
+Menu
+1. Add a shape
+2. Update a shape
+3. Delete a shape
+4. Display all shapes
+5. Exit
+Enter your choice: 1
+Enter the shape type (t for Triangle/r for Rectangle): t
+Enter the width of the shape: 5.0
+Enter the height of the shape: 10.0
+Shape added successfully!
+Menu
+1. Add a shape
+2. Update a shape
+3. Delete a shape
+4. Display all shapes
+5. Exit
+Enter your choice: 3
+Enter the index of the shape to delete: 0
+Shape deleted successfully!
+Menu
+1. Add a shape
+2. Update a shape
+3. Delete a shape
+4. Display all shapes
+5. Exit
+Enter your choice: 5
+Exiting...
+
+# Test Case 4: ---------------------------------------------------------------------
+Input:
+1
+t
+10.0
+5.0
+4
+5
+
+Expected Output:
+Menu
+1. Add a shape
+2. Update a shape
+3. Delete a shape
+4. Display all shapes
+5. Exit
+Enter your choice: 1
+Enter the shape type (t for Triangle/r for Rectangle): t
+Enter the width of the shape: 10.0
+Enter the height of the shape: 5.0
+Shape added successfully!
+Menu
+1. Add a shape
+2. Update a shape
+3. Delete a shape
+4. Display all shapes
+5. Exit
+Enter your choice: 4
+Shape 0 --> Shape Type: Triangle Width: 10.0 Height: 5.0 Area: 25.0
+Menu
+1. Add a shape
+2. Update a shape
+3. Delete a shape
+4. Display all shapes
+5. Exit
+Enter your choice: 5
+Exiting...

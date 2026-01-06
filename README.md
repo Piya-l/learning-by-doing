@@ -29,3 +29,14 @@ Each assignment is located in its own directory:
 ## ❓ Questions or Issues
 
 If you find any mistakes or unclear instructions in an assignment, please notify the instructor.
+
+---
+
+## 📜 Copyright & Academic Notice
+
+© Piya Limcharoen. All rights reserved.
+
+This material is provided **for academic individual study only**.  
+Any unauthorized use, reproduction, distribution, or sharing with others is strictly prohibited.  
+
+Improper use may be considered **academic misconduct** and may be subject to institutional disciplinary action and applicable laws.
