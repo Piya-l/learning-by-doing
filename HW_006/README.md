@@ -1,134 +1,143 @@
 # MyDate Class Assignment
 
-The `MyDate` class models a date instance and includes methods for validating and manipulating dates. Below are the details of the class requirements.
+The `MyDate` class models a date instance and includes methods for validating and manipulating dates. Below are the detailed requirements for the class.
 
-> **Note**: You are **not allowed** to use any Date libraries in this implementation.
+> **Important Constraint**: You are **not allowed** to use any built-in Date/Time libraries (like `datetime`, `calendar`, etc.) for any part of this implementation. All logic must be calculated manually using the rules defined below.
 
 ![UML Class Diagram](OOPMyDate.png)
 
-## Instance Variables
+## 1. Calendar Standards & Constraints
 
-The `MyDate` class contains the following private instance variables:
+To ensure all implementations behave identically, you must adhere to these specific rules:
 
-- **year** (int): Between 1 and 9999.
-- **month** (int): Between 1 (January) and 12 (December).
-- **day** (int): Between 1 and 28, 29, 30, or 31 depending on the month and whether it's a leap year for February.
+* **Calendar System**: Use the **Gregorian Calendar** rules.
+* **Valid Year Range**: Years must be between **1582** and **9999** (inclusive).
+    * *Note*: 1582 is the year the Gregorian calendar was widely adopted.
+* **Day of Week Reference**: To calculate the day of the week, you must use **Thursday, January 1st, 1970** as your reference point (epoch).
+    * Calculations for dates before and after this reference point must derive the day of the week by counting the total days difference.
 
-## Static Variables
+## 2. Instance Variables
 
-The class also contains the following public static final variables:
+The `MyDate` class must contain the following **private** instance variables:
 
-- **MONTHS** (`String[]`): Array of month names.
-- **DAYS** (`String[]`): Array of day names.
-- **DAY_IN_MONTHS** (`int[]`): Array of the number of days in each month.
+-   `year` (int): Valid range [1582, 9999].
+-   `month` (int): Valid range [1, 12].
+-   `day` (int): Valid range [1, n], where n is the number of days in that specific month/year.
 
-These static variables are initialized as shown and are used in the methods.
+## 3. Static Variables
 
-## Static Methods
+Initialize the following **public static final** variables exactly as shown:
 
-The `MyDate` class includes the following public static methods:
+-   `MONTHS`: `["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]`
+-   `DAYS`: `["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]`
+-   `DAYS_IN_MONTHS`: `[31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]`
+    * *Implementation Note*: You must strictly use `DAYS_IN_MONTHS` for standard lookups. For Leap Years, you must manually override the days in February to 29.
 
-### 1. `isLeapYear(int year)`
-Returns `true` if the given year is a leap year. A year is a leap year if:
-- It is divisible by 4 but not by 100, or
-- It is divisible by 400.
+## 4. Static Methods
 
-### 2. `isValidDate(int year, int month, int day)`
-Returns `true` if the given year, month, and day constitute a valid date. The month should be between 1 (Jan) and 12 (Dec), and the day should be valid for that month and year.
+### `isLeapYear(int year)`
+Returns `true` if the year is a leap year; otherwise `false`.
+* **Algorithm**: A year is a leap year if:
+    1.  It is divisible by 4, AND
+    2.  It is NOT divisible by 100, UNLESS
+    3.  It is divisible by 400.
 
-### 3. `getDayOfWeek(int year, int month, int day)`
-Returns the day of the week as an integer:
-- 0 for Sunday,
-- 1 for Monday,
-- ..., 
-- 6 for Saturday.
+### `isValidDate(int year, int month, int day)`
+Returns `true` only if:
+* `year` is between 1582 and 9999.
+* `month` is between 1 and 12.
+* `day` is between 1 and the last valid day of that specific month (accounting for leap years).
 
-## Constructor
+### `getDayOfWeek(int year, int month, int day)`
+Returns an integer representing the day of the week (0=Sunday, 1=Monday, ..., 6=Saturday).
+* **Required Algorithm**:
+    1.  Calculate the total number of days elapsed between the input date and the reference date (**Thursday, Jan 1, 1970**).
+    2.  Adjust the reference day index (Thursday = 4) by the modulo of the total days.
+    3.  Ensure the result handles negative differences (dates before 1970) correctly to return a positive index 0-6.
 
-The `MyDate` class has one constructor which takes 3 parameters: `year`, `month`, and `day`. It invokes the `setDate()` method to initialize the instance variables.
+## 5. Constructor
 
-## Public Methods
+### `MyDate(int year, int month, int day)`
+* Calls the `setDate(year, month, day)` method.
 
-The following public methods are defined in the `MyDate` class:
+## 6. Public Methods
 
-### 1. `setDate(int year, int month, int day)`
-Invokes (calls) the static method `isValidDate()` to verify that the provided year, month, and day form a valid date.
-- **Note**: If the date is invalid, it `raise ValueError("Invalid year, month, or day!")`.
+### `setDate(int year, int month, int day)`
+* Calls `isValidDate`.
+* If valid, sets the instance variables.
+* If invalid, `raise ValueError("Invalid year, month, or day!")`.
 
-### 2. `setYear(int year)`
-Verifies that the given year is between 1 and 9999.
+### `setYear(int year)`
+* Validates range [1582, 9999].
+* If invalid, `raise ValueError("Invalid year!")`.
 
-- **Note**: `raise ValueError("Invalid year!")` if the year is out of range.
+### `setMonth(int month)`
+* Validates range [1, 12].
+* If invalid, `raise ValueError("Invalid month!")`.
 
-### 3. `setMonth(int month)`
-Verifies that the given month is between 1 and 12.
-- **Note**: `raise ValueError("Invalid month!")`  if the month is out of range.
+### `setDay(int day)`
+* Validates range [1, last day of current month].
+* If invalid, `raise ValueError("Invalid day!")`.
 
-### 4. `setDay(int day)`
-Verifies that the given day is between 1 and the maximum days in that month, considering leap years for February.
-- **Note**: `raise ValueError("Invalid day!")`  if the day is invalid for the given month.
+### Getters
+* `getYear()`, `getMonth()`, `getDay()`: Return the respective instance variables.
 
-### 5. `getYear()`, `getMonth()`, `getDay()`
-Returns the value of the year, month, and day, respectively.
-
-### 6. `toString()`
-Returns a string representation of the date in the format `"xxxday d mmm yyyy"`. For example: `"Tuesday 14 Feb 2012"`.
-
-### 7. `nextDay()`
-Updates the instance to the next day and returns the instance. For example:
-- The next day after `31 Dec 2000` would be `1 Jan 2001`.
-
-### 8. `nextMonth()`
-Updates the instance to the next month and returns the instance. For example:
-- The next month after `31 Oct 2012` would be `30 Nov 2012`.
-
-### 9. `nextYear()`
-Updates the instance to the next year and returns the instance. For example:
-- The next year after `29 Feb 2012` would be `28 Feb 2013`.
-- **Note**: `raise ValueError("Year out of range!")` if the year exceeds 9999.
-
-### 10. `previousDay()`, `previousMonth()`, `previousYear()`
-Similar to `nextDay()`, `nextMonth()`, and `nextYear()`, these methods update the instance to the previous day, month, or year, respectively.
+### `toString()`
+* Returns a string formatted exactly as: `"Monday 1 Jan 2000"`.
+* Format: `"[DayName] [day] [MonthName] [year]"`
 
 ---
 
-## Additional Notes
+### 7. Manipulation Methods (Logic Requirements)
 
-- The class should properly handle leap years, months with different numbers of days, and the transition between years, months, and days.
-- Make sure to handle exceptions and validations according to the Note requirements.
+These methods update the current instance (`self`) and return it. You must implement the specific **"Rollover"** and **"Clamping"** logic described below to handle invalid intermediate states.
 
+### `nextDay()`
+* **Logic**: Increment `day` by 1.
+* **Rollover**:
+    * If `day` > days in current month, reset `day` to 1 and increment `month`.
+    * If `month` > 12, reset `month` to 1 and increment `year`.
+* **Validation**: Check year bounds. If year > 9999, `raise ValueError("Year out of range!")`.
+
+### `nextMonth()`
+* **Logic**: Increment `month` by 1.
+* **Rollover**: If `month` > 12, reset `month` to 1 and increment `year`.
+* **Clamping (Skip Invalid)**: If the current `day` exceeds the number of days in the *new* month, clamp `day` to the last valid day of that new month.
+    * *Case*: `31 Jan` -> `nextMonth()` -> `28 Feb` (or 29 Feb).
+    * *Case*: `31 Mar` -> `nextMonth()` -> `30 Apr`.
+* **Validation**: Check year bounds.
+
+### `nextYear()`
+* **Logic**: Increment `year` by 1.
+* **Clamping (Skip Invalid)**: If current date is `29 Feb` and new year is not a leap year, clamp `day` to `28`.
+* **Validation**: If year > 9999, `raise ValueError("Year out of range!")`.
+
+### `previousDay()`
+* **Logic**: Decrement `day` by 1.
+* **Rollover**:
+    * If `day` becomes 0, decrement `month`. Set `day` to the maximum days of that *new* month.
+    * If `month` becomes 0, set `month` to 12 and decrement `year`.
+* **Validation**: If year < 1582, `raise ValueError("Year out of range!")`.
+
+### `previousMonth()`
+* **Logic**: Decrement `month` by 1.
+* **Rollover**: If `month` becomes 0, set `month` to 12 and decrement `year`.
+* **Clamping (Skip Invalid)**: If current `day` > days in new month, clamp `day` to the max days of the new month.
+    * *Case*: `31 Mar` -> `previousMonth()` -> `28 Feb`.
+* **Validation**: Check year bounds.
+
+### `previousYear()`
+* **Logic**: Decrement `year` by 1.
+* **Clamping (Skip Invalid)**: If date is `29 Feb` and previous year is not a leap year, clamp `day` to `28`.
+* **Validation**: If year < 1582, `raise ValueError("Year out of range!")`.
+
+---
 
 ## Instructions
 
-1. **Create/Modify `homework.py`:**
-
-
-2. **Running the Script Normally:**
-   - To run the script normally, open your terminal and navigate to the directory containing `homework.py`.
-   - Execute the script using Python:
-     ```sh
-     python homework.py
-     ```
-
-3. **Running the Script with Test Cases:**
-   - To check your script against the provided test cases, you can use the `chk_testcases.py` script.
-   - Open your terminal and navigate to the directory containing `chk_testcases.py`.
-   - Execute the test script using Python:
-     ```sh
-     python chk_testcases.py
-     ```
-
-## Output from the Unittest
-
-Here is an example of what the output might look like when you run the test script:
-
->```
->..
->----------------------------------------------------------------------
->Ran 2 tests in 0.000s
->
->OK
->```
-
-
-This output indicates that both test cases have passed successfully. 
+1.  **Create `homework.py`**: Implement the class following the logic above strictly.
+2.  **Test Execution**:
+    To verify your strict adherence to the logic, run the test script:
+    ```sh
+    python chk_testcases.py
+    ```
