@@ -2,11 +2,7 @@
 
 This repository contains **questions for this course**, organized by folders.
 
-Each assignment is located in its own directory:
-
-- [HW_001](HW_001/)
-- [HW_002](HW_002/)
-- [HW_003](HW_003/)
+Each assignment is located in its own directory.
 
 ---
 
