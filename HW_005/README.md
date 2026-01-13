@@ -13,7 +13,7 @@ Implement all the classes as described in the provided UML diagram.
 
 - The text **"Displaying all shapes:"** should be printed inside the `display_all_shapes()` method. All other output is produced polymorphically by calling `display_info()` on each shape object.
 
-
+- `display_info()` display the content up to waht it have.
 
 
 1. **Edit/Modify `homework.py`:**  
