@@ -1,0 +1,6 @@
+=== 1. Testing Creation & Validation ===
+Created: Droid: Alpha, S/N: AZ-0001, Power: 50
+Created: Droid: Beta, S/N: AZ-0002, Power: 50
+Current Population: 2
+Alpha (AZ-0001) is being scrapped.
+Beta (AZ-0002) is being scrapped.

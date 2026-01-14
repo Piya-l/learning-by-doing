@@ -1,0 +1,8 @@
+--- Testing Lifecycle (Debug=True) ---
+Employee loaded.
+Employee initialized: DebugEmp
+Working...
+Employee method work called.
+DebugEmp is working on Testing.
+Employee DebugEmp deleted.
+Done.

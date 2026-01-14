@@ -1,4 +1,4 @@
-# Classwork 5: Example in Lecture note
+# Classwork: Example in Lecture note
 
 According to the lecture note, follow its instructions to complete the `homework.py` file.
 
@@ -13,7 +13,7 @@ Implement all the classes as described in the provided UML diagram.
 
 - The text **"Displaying all shapes:"** should be printed inside the `display_all_shapes()` method. All other output is produced polymorphically by calling `display_info()` on each shape object.
 
-- `display_info()` display the content up to waht it have.
+- `display_info()` displays all available content up to what it has.
 
 
 1. **Edit/Modify `homework.py`:**  

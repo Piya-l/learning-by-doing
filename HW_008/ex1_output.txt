@@ -1,0 +1,4 @@
+--- Testing Employee ---
+Name: Alice, Salary: 50000
+Alice is working on Reporting.
+Alice is working on Analysis for 3 hours.

@@ -1,0 +1,11 @@
+=== Testing Magic Methods ===
+Fused Droid: Droid: Alpha-Beta, S/N: AZ-0001-AZ-0002, Power: 100
+
+=== Testing Inheritance ===
+Protocol Droid: C-3PO, Languages: 2
+Translating 'Hello' to all known languages.
+Translating 'Hola' to English.
+Alpha (AZ-0001) is being scrapped.
+Beta (AZ-0002) is being scrapped.
+Alpha-Beta (AZ-0001-AZ-0002) is being scrapped.
+C-3PO (AZ-9999) is being scrapped.

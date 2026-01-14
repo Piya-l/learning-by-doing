@@ -1,0 +1,7 @@
+--- Testing Manager ---
+Name: Bob, Salary: 90000, Department: Sales
+Bob is working on Meeting.
+
+--- Testing Developer ---
+Name: Charlie, Salary: 80000, Language: Python
+Charlie is working on Coding.

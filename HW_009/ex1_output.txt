@@ -1,0 +1,5 @@
+=== Testing Character (Base Class) ===
+Name: Villager
+HP: 100
+After taking 20 dmg: 80
+After healing 10: 90

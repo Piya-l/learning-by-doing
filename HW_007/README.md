@@ -133,11 +133,33 @@ These methods update the current instance (`self`) and return it. You must imple
 
 ---
 
+## 8. Expected Output
+
+When you run `chk_homework.py`, the output should match this **exactly**:
+
+```text
+Tuesday 28 Feb 2012
+Wednesday 29 Feb 2012
+Thursday 1 Mar 2012
+Sunday 1 Apr 2012
+Monday 1 Apr 2013
+Monday 2 Jan 2012
+Sunday 1 Jan 2012
+Saturday 31 Dec 2011
+Wednesday 30 Nov 2011
+Tuesday 30 Nov 2010
+Monday 28 Feb 2011
+Invalid year, month, or day!
+Invalid year, month, or day!
+```
+
+---
+
 ## Instructions
 
 1.  **Create `homework.py`**: Implement the class following the logic above strictly.
 2.  **Test Execution**:
     To verify your strict adherence to the logic, run the test script:
     ```sh
-    python chk_testcases.py
+    python chk_homework.py
     ```

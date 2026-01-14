@@ -1,0 +1,10 @@
+=== Testing Warrior ===
+Warrior: Arthur, Lvl: 10, STR: 50, HP: 100
+Arthur swings sword at Dummy for 75.0 dmg!
+Dummy HP after attack: 25.0
+
+=== Testing Mage ===
+Merlin hits Dummy2 with staff for 10 dmg!
+Dummy2 HP after weak attack: 90
+Merlin casts Fireball on Dummy2 for 30 dmg!
+Dummy2 HP after Fireball: 60
