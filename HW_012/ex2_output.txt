@@ -1,0 +1,8 @@
+=== 1. Arithmetic Operations ===
+Combined: Product: Apple, Price: $1.5, Stock: 15
+Multiplied: Product: Apple, Price: $1.5, Stock: 20
+
+=== 2. Stock Management ===
+Has stock? True
+Sold 10. Has stock? False
+Stock count: 0

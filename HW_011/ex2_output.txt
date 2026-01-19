@@ -1,0 +1,7 @@
+=== 1. Testing Transactions ===
+Account: 001
+Deposited $500. Balance: 500
+Withdraw $200 (PIN 8888): True
+Balance check (PIN 8888): 300
+Withdraw $100 (PIN 0000): False
+Withdraw $1000 (PIN 8888): False

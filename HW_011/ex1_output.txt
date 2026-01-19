@@ -1,0 +1,8 @@
+=== 1. Testing Class & Static Methods ===
+Initial accounts: 0
+Valid PIN '1234': True
+Valid PIN '12': False
+Interest on $1000 at 5%: $50.0
+
+=== 2. Creating Accounts ===
+Total accounts now: 2

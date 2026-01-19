@@ -1,0 +1,7 @@
+=== 1. Creation & String Repr ===
+Product: Apple, Price: $1.5, Stock: 100
+Product('Banana', 0.8, 50)
+
+=== 2. Comparison (by Price) ===
+Apple($1.5) > Banana($0.8): True
+Apple($1.5) == Banana($0.8): False
