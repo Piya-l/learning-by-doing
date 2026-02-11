@@ -1,0 +1,7 @@
+Listing all devices in my smart home:
+------------------------------
+- Smart TV (Entertainment)
+- AC Unit (Appliance)
+- Main Gate (Security)
+------------------------------
+Done!

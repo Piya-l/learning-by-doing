@@ -1,0 +1,9 @@
+=== Demonstration 1: Manual next() ===
+First device: WiFi Router (Network)
+Second device: Smart Speaker (Audio)
+No more devices (StopIteration raised)
+
+=== Demonstration 2: While loop with next() ===
+Device: WiFi Router (Network)
+Device: Smart Speaker (Audio)
+End of list reached.

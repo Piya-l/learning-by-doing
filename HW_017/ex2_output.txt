@@ -1,0 +1,16 @@
+--- Using Video Game Store (Legacy Backend) ---
+Added Cyberpunk 2077 for $29.99
+Added Elden Ring for $59.99
+
+Final Total: $89.98
+Processing payment...
+Old API received payment: 8998 cents. Success!
+Checkout Complete.
+
+--- Using Clothing Store (Modern Backend) ---
+Added Cool Shirt for $15.0
+
+Final Total: $15.00
+Processing payment...
+Stripe processed $15.0 directly.
+Checkout Complete.

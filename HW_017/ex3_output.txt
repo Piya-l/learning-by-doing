@@ -1,0 +1,11 @@
+=== Batch Processing Transactions ===
+Processing for Alice: $10.0
+Old API received payment: 1000 cents. Success!
+--------------------
+Processing for Bob: $25.5
+Old API received payment: 2550 cents. Success!
+--------------------
+Processing for Charlie: $5.75
+Old API received payment: 575 cents. Success!
+--------------------
+Batch Processing Finished.

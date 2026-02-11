@@ -1,0 +1,7 @@
+=== First Loop ===
+Loop 1: Smart Light (Light)
+Loop 1: Smart Lock (Security)
+
+=== Second Loop (Consecutive) ===
+Loop 2: Smart Light (Light)
+Loop 2: Smart Lock (Security)

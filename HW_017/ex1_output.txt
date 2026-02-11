@@ -1,0 +1,3 @@
+Customer is paying $49.95...
+Old API received payment: 4995 cents. Success!
+Payment processing complete.
